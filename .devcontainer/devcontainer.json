@@ -1,0 +1,38 @@
+{
+	"name": "BM_DEV_CONTAINER",
+	"image": "mcr.microsoft.com/devcontainers/java:17",
+
+	"features": {
+		"ghcr.io/devcontainers/features/java:1": {
+		   	"version": "17",
+			"jdkDistrp": "ms",
+		   	"installGradle": "false",
+		   	"installMaven": "true",
+			"installAnt": "false"
+	    }
+	},
+
+    "customizations": {
+		"vscode": {
+			"extensions": [
+				"esbenp.prettier-vscode",
+				"dbaeumer.vscode-eslint",
+				"redhat.java",
+				"mwpb.java-prettier-formatter",
+				"vscjava.vscode-java-pack",
+				"VisualStudioExptTeam.vscodeintellicode",
+				"SonarSource.sonarlint-vscode",
+				"shengchen.vscode-checkstyle"
+			],
+
+			"settings": {
+				"terminal.integrated.shell.linux": "/bin/zsh",
+				"editor.tabSize": 2,
+				"java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+				"java.format.settings.profile": "GoogleStyle"
+			}
+		}
+	},
+
+	"remoteUser": "root"
+}
